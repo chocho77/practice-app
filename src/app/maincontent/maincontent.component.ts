@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector:'app-maincontent',
@@ -14,6 +14,13 @@ import { Component } from "@angular/core";
            
            `]
 })
-export class MaincontentComponent {
+export class MaincontentComponent implements OnInit{
+  
+
+  constructor(){}
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
+  }
+ 
   
 }

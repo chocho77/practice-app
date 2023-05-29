@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 
 @Component({
@@ -6,6 +6,8 @@ import {Component} from '@angular/core';
   template: `<div>
              <main>
               <h1>Navbar Component</h1>
+              <h2>{{title}}</h2>
+              <h2>{{fromParent}}</h2>
              </main>
             </div>`,
   styles:[`div {background-color:green}
@@ -15,6 +17,17 @@ import {Component} from '@angular/core';
            `]
 
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
+  title:string = "hello, there !";
+
+  @Input() fromParent='';
+
+  constructor(){
+
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
 
 }
